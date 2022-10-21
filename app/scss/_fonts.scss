@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../../fonts/BrandonGrotesque-Black.woff2') format('woff2'),
+        url('../../fonts/BrandonGrotesque-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+$font-uno: 'Brandon Grotesque', sans-serif;
+$font-title: 'Poppins', sans-serif;
+
+body,
+html {
+    font-family: $font-uno;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $black;
+}
+
+// @font-face {
+//     font-family: 'Brandon Grotesque';
+//     font-style: normal;
+//     font-weight: 300;
+//     src: url('../fonts/brandon-grotesque.otf');
+//     /* IE9 Compat Modes */
+//     src: url('../fonts/brandon-grotesque.otf') format('opentype'), /* Safari, Android, iOS */
+// }
+
+// $font-uno: 'Brandon Grotesque', sans-serif;
+
+// body,
+// html {
+//     font-family: $font-uno;
+//     font-size: 16px;
+//     font-weight: 300;
+//     font-style: normal;
+//     font-stretch: normal;
+//     letter-spacing: normal;
+//     text-align: left;
+//     color: $black;
+// }

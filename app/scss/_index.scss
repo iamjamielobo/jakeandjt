@@ -1,0 +1,314 @@
+.body-container {
+    .wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .page-title {
+        font-family: $font-title;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 69px;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: $black;
+        margin-bottom: 60px;
+    }
+
+    .hero {
+        // background: url(../../img/hero.png);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+        .hero-container {
+            img {
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+        .overlay {
+            background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 25.72%, rgba(0, 0, 0, 0) 100%);
+            opacity: 0.84;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            .overlay-content {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .logo-container {
+                    padding-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                h1 {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0%, -50%);
+                    left: 0;
+                    right: 0;
+                    font-size: 120px;
+                    line-height: 108px;
+                    text-align: center;
+                    letter-spacing: -0.012em;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .training {
+        background-color: #F2EEEE;
+
+    }
+
+    .cardio-strength-training {
+        background-color: $cardioBg;
+        padding: 120px 0 117px;
+        text-align: center;
+
+        .cardio-strength-training-wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .mini-title {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.012em;
+            color: $cardioFontColor;
+        }
+
+        .title {
+            // font-family: 'Rigid Square';
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 108%;
+            letter-spacing: -0.05em;
+            color: $white;
+            margin: 24px 0 36px;
+        }
+
+        .content {
+            font-weight: 390;
+            font-size: 24px;
+            line-height: 124%;
+            color: $white;
+        }
+    }
+
+    .studio-floor {
+        margin: 120px 0;
+
+        .section-grid {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 70px;
+
+            .block {
+                .img-wrapper {
+                    position: relative;
+                    text-align: center;
+                    overflow: hidden;
+                    border-radius: 20px;
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.112) 100%);
+
+                        &._hidden {
+                            background: none;
+                        }
+
+                        .caption {
+                            font-weight: 390;
+                            font-size: 24px;
+                            line-height: 28px;
+                            color: $white;
+                            position: absolute;
+                            top: 40px;
+                            left: 40px;
+                        }
+                    }
+                }
+
+                .content {
+                    font-weight: 390;
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: $black;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .studio-sessions {
+        .weekly-time-table {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-column-gap: 15px;
+            .date-block {
+                border: 1px solid #EF4025;
+                font-weight: 420;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                letter-spacing: -0.012em;
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                .date {
+                    background-color: #EF4025;
+                    padding: 19px 8px 15px 9px;
+                }
+                .timings {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 1;
+                    color: #EF4025;
+                    &._no-sessions {
+                        color: #8F8F8F;
+                        padding: 98px 50px 90px;
+                    }
+                    p {
+                        display: flex;
+                        flex: 1;
+                        align-items: center;
+                        justify-content: center;
+                        border-top: 1px solid #EF4025;
+                        width: 100%;
+                        &:first-child {
+                            border-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .video-section {
+        padding: 60px 0 120px;
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .coaching {
+        margin-bottom: 120px;
+        .time-table {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+
+            .cell {
+                display: table-cell;
+                width: 100px;
+                border-top: solid $black 1px;
+                border-left: solid $black 1px;
+                text-align: center;
+                vertical-align: middle;
+                padding: 28px 40px;
+                &._no-border {
+                    border: 0!important;
+                }
+                &:last-child {
+                    border-right: solid $black 1px;
+                }
+            }
+            &:last-child {
+                .cell {
+                    border-bottom: 1px solid $black;
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        margin-bottom: 50px;
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-block {
+            display: flex;
+
+            .img-block {
+                img {
+                    display: block;
+                }
+            }
+        }
+
+        .map-frame {
+            flex: 1;
+            position: relative;
+
+            .overlay {
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: rgba(239, 64, 37, 0.8);
+                width: 376px;
+                height: 100%;
+                color: $white;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -0.012em;
+                padding: 33px;
+            }
+        }
+    }
+
+    .social {
+        margin-top: 40px;
+        text-align: center;
+
+        .social-wrapper {
+            a {
+                margin-right: 10px;
+                display: inline-block;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
