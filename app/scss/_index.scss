@@ -72,7 +72,29 @@
 
     .training {
         background-color: #F2EEEE;
+        .navigation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 40px 0;
+            ul {
+                display: flex;
+                flex-direction: row;
+                li {
+                    margin-right: 40px;
+                    font-weight: 420;
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: -0.012em;
+                    color: $black;
+                    cursor: pointer;
 
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
     }
 
     .cardio-strength-training {
@@ -111,7 +133,7 @@
     }
 
     .studio-floor {
-        margin: 120px 0;
+        margin: 120px 0 0;
 
         .section-grid {
             display: grid;
@@ -163,6 +185,7 @@
     }
 
     .studio-sessions {
+        padding-top: 120px;
         .weekly-time-table {
             display: grid;
             grid-template-columns: repeat(7, 1fr);

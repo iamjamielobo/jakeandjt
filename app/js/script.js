@@ -1,13 +1,9 @@
-const testString = 'This is a test!';
-
-console.log(testString);
-
-const fruits = [
-  'mango',
-  'papaya',
-  'lychee',
-];
-
-fruits.map((fruit) => {
-  console.log(fruit);
+$(document).ready(function () {
+    $('nav.navigation ul li').click(function () {
+        var el = `#${$(this).attr("data-id")}`;
+        console.log(el)
+        document.querySelector(el).scrollIntoView({
+            behavior: 'smooth'
+        });
+    })
 });

@@ -1,2 +1,2 @@
-const testString="This is a test!";console.log(testString);const fruits=["mango","papaya","lychee"];fruits.map((t=>{console.log(t)}));
+$(document).ready((function(){$("nav.navigation ul li").click((function(){var o="#"+$(this).attr("data-id");console.log(o),document.querySelector(o).scrollIntoView({behavior:"smooth"})}))}));
 //# sourceMappingURL=script.js.map
