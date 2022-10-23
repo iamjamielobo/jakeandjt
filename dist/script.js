@@ -1,2 +1,2 @@
-$(document).ready((function(){$("nav.navigation ul li").click((function(){var o="#"+$(this).attr("data-id");console.log(o),document.querySelector(o).scrollIntoView({behavior:"smooth"})}))}));
+$(document).ready((function(){$("nav.navigation ul li").click((function(){var t="#"+$(this).attr("data-id");console.log(t),document.querySelector(t).scrollIntoView({behavior:"smooth"})})),$(".js-input").keyup((function(){$(this).val()?$(this).addClass("not-empty"):$(this).removeClass("not-empty")}))}));
 //# sourceMappingURL=script.js.map

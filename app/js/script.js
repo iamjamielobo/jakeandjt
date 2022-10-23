@@ -1,9 +1,17 @@
 $(document).ready(function () {
-    $('nav.navigation ul li').click(function () {
+    $("nav.navigation ul li").click(function () {
         var el = `#${$(this).attr("data-id")}`;
-        console.log(el)
+        console.log(el);
         document.querySelector(el).scrollIntoView({
-            behavior: 'smooth'
+            behavior: "smooth",
         });
-    })
+    });
+
+    $(".js-input").keyup(function () {
+        if ($(this).val()) {
+            $(this).addClass("not-empty");
+        } else {
+            $(this).removeClass("not-empty");
+        }
+    });
 });

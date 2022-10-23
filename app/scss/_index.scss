@@ -33,7 +33,10 @@
         }
 
         .overlay {
-            background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.8) 25.72%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(180deg,
+                    #000000 0%,
+                    rgba(0, 0, 0, 0.8) 25.72%,
+                    rgba(0, 0, 0, 0) 100%);
             opacity: 0.84;
             position: absolute;
             top: 0;
@@ -71,15 +74,18 @@
     }
 
     .training {
-        background-color: #F2EEEE;
+        background-color: #f2eeee;
+
         .navigation {
             position: absolute;
             top: 0;
             left: 0;
             padding: 40px 0;
+
             ul {
                 display: flex;
                 flex-direction: row;
+
                 li {
                     margin-right: 40px;
                     font-weight: 420;
@@ -91,6 +97,183 @@
 
                     &:last-child {
                         margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .form-container {
+            position: absolute;
+            top: -208px;
+            right: 0;
+            width: 434px;
+            background: $white;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+
+            .form-wrapper {
+                padding: 32px 24px;
+
+                .form-title {
+                    margin-bottom: 25px;
+                    font-weight: 450;
+                    font-size: 28px;
+                    line-height: 36px;
+                    letter-spacing: -0.012em;
+                    color: $black;
+                }
+
+                .cost-list {
+                    display: grid;
+                    grid-template-columns: repeat(3, 30%);
+                    grid-column-gap: 5%;
+                    text-align: center;
+                    margin-bottom: 60px;
+
+                    .cost-block {
+                        background: $white;
+                        border: 1px solid #ef4025;
+                        text-align: center;
+                        padding: 19px 18px;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        p:first-child {
+                            font-family: $font-title;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 22px;
+                            letter-spacing: -0.01em;
+                            color: #ef4025;
+                            margin-bottom: 8px;
+                        }
+
+                        p:last-child {
+                            font-weight: 450;
+                            font-size: 14px;
+                            line-height: 22px;
+                            letter-spacing: -0.01em;
+                            color: #525252;
+                        }
+
+                        &._selected,
+                        &:hover {
+                            background: #ef4025;
+                            color: $white;
+
+                            p:first-child,
+                            p:last-child {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+                .row {
+                    @include clearfix;
+                    margin: -20px 0;
+                }
+
+                .content-wrapper {
+                    min-height: 100%;
+                    position: relative;
+                }
+
+                .contact-form {
+                    .form-field {
+                        position: relative;
+                        margin: 50px 0;
+                        &.no-margin {
+                            margin: 0;
+                        }
+                        &.select-field {
+                            margin: 25px 0 50px;
+                        }
+                    }
+
+                    .input-text {
+                        display: block;
+                        width: 100%;
+                        height: 36px;
+                        border-width: 0 0 2px 0;
+                        border-color: #BBBBBB;
+                        font-family: $font-title;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                        letter-spacing: -0.01em;
+                        color: #888;
+                        padding-left: 10px;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &:focus,
+                        &.not-empty {
+                            +.label {
+                                transform: translateY(-24px);
+                            }
+                        }
+                    }
+
+                    .label {
+                        position: absolute;
+                        left: 10px;
+                        bottom: 11px;
+                        font-family: Lusitana, serif;
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 400;
+                        color: #888;
+                        cursor: text;
+                        transition: transform 0.2s ease-in-out;
+                    }
+
+                    .custom-select {
+                        select {
+                            // -webkit-appearance: none;
+                            // -moz-appearance: none;
+                            // appearance: none;
+                            width: 100%;
+                            padding: 15px 10px;
+                            background: none;
+                            border: 0;
+                            border-bottom: 2px solid #BBBBBB;
+                            color: #888;
+                            font-size: 18px;
+                            line-height: 26px;
+                            font-weight: 400;
+                        }
+
+                        select::-ms-expand {
+                            display: none;
+                        }
+                    }
+
+                    .submit-btn {
+                        display: block;
+                        background-color: #000;
+                        color: #fff;
+                        font-family: Raleway, sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 8px 16px;
+                        border: none;
+                        cursor: pointer;
+                        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+                        // font-family: $font-title;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 22px;
+                        text-align: center;
+                        letter-spacing: -0.01em;
+                        width: 100%;
+                        padding: 19px 0;
                     }
                 }
             }
@@ -115,7 +298,7 @@
         }
 
         .title {
-            // font-family: 'Rigid Square';
+            // font-family: $font-title;
             font-weight: 700;
             font-size: 64px;
             line-height: 108%;
@@ -133,7 +316,7 @@
     }
 
     .studio-floor {
-        margin: 120px 0 0;
+        margin: 120px 0 60px;
 
         .section-grid {
             display: grid;
@@ -154,7 +337,9 @@
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.112) 100%);
+                        background: linear-gradient(180deg,
+                                rgba(0, 0, 0, 0.8) 0%,
+                                rgba(0, 0, 0, 0.112) 100%);
 
                         &._hidden {
                             background: none;
@@ -185,13 +370,15 @@
     }
 
     .studio-sessions {
-        padding-top: 120px;
+        padding-top: 60px;
+
         .weekly-time-table {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             grid-column-gap: 15px;
+
             .date-block {
-                border: 1px solid #EF4025;
+                border: 1px solid #ef4025;
                 font-weight: 420;
                 font-size: 18px;
                 line-height: 26px;
@@ -200,28 +387,33 @@
                 color: $white;
                 display: flex;
                 flex-direction: column;
+
                 .date {
-                    background-color: #EF4025;
+                    background-color: #ef4025;
                     padding: 19px 8px 15px 9px;
                 }
+
                 .timings {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     flex: 1;
-                    color: #EF4025;
+                    color: #ef4025;
+
                     &._no-sessions {
-                        color: #8F8F8F;
+                        color: #8f8f8f;
                         padding: 98px 50px 90px;
                     }
+
                     p {
                         display: flex;
                         flex: 1;
                         align-items: center;
                         justify-content: center;
-                        border-top: 1px solid #EF4025;
+                        border-top: 1px solid #ef4025;
                         width: 100%;
+
                         &:first-child {
                             border-top: 0;
                         }
@@ -232,7 +424,7 @@
     }
 
     .video-section {
-        padding: 120px 0;
+        padding: 120px 0 80px;
 
         .video-container {
             position: relative;
@@ -251,7 +443,8 @@
     }
 
     .coaching {
-        margin-bottom: 120px;
+        padding: 40px 0 120px;
+
         .time-table {
             display: table;
             width: 100%;
@@ -265,13 +458,16 @@
                 text-align: center;
                 vertical-align: middle;
                 padding: 28px 40px;
+
                 &._no-border {
-                    border: 0!important;
+                    border: 0 !important;
                 }
+
                 &:last-child {
                     border-right: solid $black 1px;
                 }
             }
+
             &:last-child {
                 .cell {
                     border-bottom: 1px solid $black;
