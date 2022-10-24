@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JAKE & JT</title>
-    <link rel="stylesheet" href="dist/App.css" />
+    <link rel="stylesheet" href="dist/App.css?1" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="preload" as="image" href="img/hero.png" />
 </head>
 
@@ -14,7 +16,7 @@
     <div class="body-container">
         <div class="hero">
             <div class="hero-container">
-                <img src="img/hero.png" alt="Hero img" />
+                <img src="img/hero.png?1" alt="Hero img" />
             </div>
             <div class="overlay">
                 <div class="overlay-content">
@@ -44,7 +46,7 @@
         </div>
         <div class="training">
             <div class="wrapper relative">
-                <img src="img/training.png" alt="Personal Training" />
+                <img src="img/training.png?1" alt="Personal Training" />
                 <nav class="navigation">
                     <ul>
                         <li data-id="cardio-strength-training">
@@ -53,45 +55,49 @@
                         <li data-id="studio-classes">Studio Classes</li>
                         <li data-id="online-training">Online Training</li>
                         <li data-id="coaches">Coaches</li>
-                        <li data-id="cardio-strength-training">Blog</li>
+                        <!-- <li data-id="cardio-strength-training">Blog</li> -->
                     </ul>
                 </nav>
                 <div class="form-container">
                     <div class="form-wrapper">
                         <p class="form-title">Start personal training</p>
                         <div class="cost-list">
-                            <div class="cost-block _selected">
+                            <div class="cost-block _selected" data-package="Drop In - $35">
                                 <p>Drop-in</p>
                                 <p>$35</p>
                             </div>
-                            <div class="cost-block">
+                            <div class="cost-block" data-package="3 × Week - $299 /mo">
                                 <p>3 × Week</p>
                                 <p>$299 /mo</p>
                             </div>
-                            <div class="cost-block">
+                            <div class="cost-block" data-package="Unlimited - $299 /mo">
                                 <p>Unlimited</p>
                                 <p>$299 /mo</p>
                             </div>
                         </div>
                         <form class="contact-form">
                             <div class="form-field">
-                                <input id="name" class="input-text js-input" type="text" required />
+                                <input id="name" class="input-text js-input" type="text" />
                                 <label class="label" for="name">Name</label>
                             </div>
                             <div class="form-field">
-                                <input id="email" class="input-text js-input" type="email" required />
+                                <input id="email" class="input-text js-input" type="email" />
                                 <label class="label" for="email">E-mail</label>
                             </div>
                             <div class="form-field select-field">
                                 <div class="custom-select">
-                                    <select placeholder="Im training for:">
-                                        <option value="1">lose weight</option>
-                                        <option value="2">stamina</option>
+                                    <select id="why" placeholder="Im training for:">
+                                        <option value="0" selected disabled>I'm training for</option>
+                                        <option value="Weight Loss">Weight Loss</option>
+                                        <option value="Stamina">Stamina</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-field align-center no-margin">
                                 <input class="submit-btn" type="submit" value="Send Inquiry" />
+                                <div class="loader-container hide">
+                                    <div class="loader"></div>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -115,7 +121,7 @@
                 <div class="section-grid">
                     <div class="block">
                         <div class="img-wrapper">
-                            <img src="img/simple.png" alt="Simple" />
+                            <img src="img/simple.png?1" alt="Simple" />
                             <div class="overlay">
                                 <span class="caption">Simple</span>
                             </div>
@@ -126,7 +132,7 @@
                     </div>
                     <div class="block">
                         <div class="img-wrapper">
-                            <img src="img/creative.png" alt="Creative" />
+                            <img src="img/creative.png?1" alt="Creative" />
                             <div class="overlay">
                                 <span class="caption">Creative</span>
                             </div>
@@ -138,8 +144,8 @@
                     </div>
                     <div class="block">
                         <div class="img-wrapper">
-                            <img src="img/personal.png" alt="Personal" />
-                            <div class="overlay _hidden">
+                            <img src="img/personal.png?1" alt="Personal" />
+                            <div class="overlay">
                                 <span class="caption">Personal</span>
                             </div>
                         </div>
@@ -211,148 +217,150 @@
         <div id="coaches" class="coaching">
             <div class="wrapper">
                 <div class="page-title">World Class Coaching</div>
-                <div class="time-table">
-                    <div class="cell _no-border"></div>
-                    <div class="cell _no-border">
-                        <a href="/">
-                            <svg width="153" height="30" viewBox="0 0 153 30" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="45" width="27" height="6" fill="#EF4025" />
-                                <rect x="77" width="27" height="6" fill="#EF4025" />
-                                <rect x="83" width="27" height="6" transform="rotate(90 83 0)" fill="#EF4025" />
-                                <rect x="104" width="27" height="6" transform="rotate(90 104 0)" fill="#EF4025" />
-                                <rect x="45" y="10.5" width="27" height="6" fill="#EF4025" />
-                                <rect x="45" y="21" width="27" height="6" fill="#EF4025" />
-                                <rect x="77" y="21" width="27" height="6" fill="#EF4025" />
+                <div class="table-wrapper">
+                    <div class="time-table">
+                        <div class="cell _no-border"></div>
+                        <div class="cell _no-border">
+                            <a href="/">
+                                <svg width="153" height="30" viewBox="0 0 153 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="45" width="27" height="6" fill="#EF4025" />
+                                    <rect x="77" width="27" height="6" fill="#EF4025" />
+                                    <rect x="83" width="27" height="6" transform="rotate(90 83 0)" fill="#EF4025" />
+                                    <rect x="104" width="27" height="6" transform="rotate(90 104 0)" fill="#EF4025" />
+                                    <rect x="45" y="10.5" width="27" height="6" fill="#EF4025" />
+                                    <rect x="45" y="21" width="27" height="6" fill="#EF4025" />
+                                    <rect x="77" y="21" width="27" height="6" fill="#EF4025" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="cell _no-border">
+                            <img src="img/soul.png?1" alt="Soul Fitness" />
+                        </div>
+                        <div class="cell _no-border">
+                            <img src="img/crossfit.png?1" alt="crossfit" />
+                        </div>
+                    </div>
+                    <div class="time-table">
+                        <div class="cell">Cardio Strength Training</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
                             </svg>
-                        </a>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
                     </div>
-                    <div class="cell _no-border">
-                        <img src="img/soul.png" alt="Soul Fitness" />
+                    <div class="time-table">
+                        <div class="cell">Focus on strength</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
+                            </svg>
+                        </div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="cell _no-border">
-                        <img src="img/crossfit.png" alt="crossfit" />
+                    <div class="time-table">
+                        <div class="cell">Increase cardio</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
+                            </svg>
+                        </div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">Circuit Training HIIT</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
+                    <div class="time-table">
+                        <div class="cell">Focus on balance</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
+                            </svg>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">Focus on strength</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
+                    <div class="time-table">
+                        <div class="cell">Safe, technique based</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
+                            </svg>
+                        </div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="cell"></div>
                     </div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="black" />
-                        </svg>
+                    <div class="time-table">
+                        <div class="cell">New workouts daily</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
+                            </svg>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
                     </div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="black" />
-                        </svg>
+                    <div class="time-table">
+                        <div class="cell">30 min workouts</div>
+                        <div class="cell">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
+                                    fill="#EF4025" />
+                            </svg>
+                        </div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
                     </div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">Increase cardio</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
-                    </div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="black" />
-                        </svg>
-                    </div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="black" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">Focus on balance</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
-                    </div>
-                    <div class="cell"></div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="black" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">Safe, technique based</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
-                    </div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="black" />
-                        </svg>
-                    </div>
-                    <div class="cell"></div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">New workouts daily</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
-                    </div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-                <div class="time-table">
-                    <div class="cell">30 min workouts</div>
-                    <div class="cell">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.4183 23.218H12.6363C12.8393 21.971 13.3903 20.608 14.3183 19.129C16.1743 16.2 19.9153 13.329 23.1343 12.662V11.444C21.5393 11.096 19.9733 10.371 18.4653 9.298C15.3913 7.123 13.1293 3.875 12.6363 0.946H11.4183C11.1283 2.483 10.4613 3.962 9.4173 5.47C7.3583 8.457 4.1393 10.661 0.862301 11.444V12.662C2.5153 13.01 4.1973 13.822 5.8503 15.069C9.2143 17.592 10.9833 20.724 11.4183 23.218Z"
-                                fill="#EF4025" />
-                        </svg>
-                    </div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
                 </div>
                 ​
             </div>
@@ -375,7 +383,7 @@
                 </div>
                 <div class="contact-block">
                     <div class="img-block">
-                        <img src="img/contact.png" alt="Contact us" />
+                        <img src="img/contact.png?1" alt="Contact us" />
                     </div>
                     <div class="map-frame">
                         <div class="mapouter">
@@ -404,29 +412,62 @@
                         </div>
                         <div class="overlay">
                             <div class="contact-details">
-                                <p style="margin-bottom: 30px">Contact us</p>
+                                <p>Contact us</p>
                                 <p>(415) 480-9159</p>
-                                <p style="margin-bottom: 130px">questions@jakeandjt.com</p>
+                                <p>questions@jakeandjt.com</p>
                                 <p>247 Shoreline Hwy</p>
                                 <p>Mill Valley, CA - 94941</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social">
-                    <div class="wrapper">
-                        <div class="social-wrapper">
-                            <a href="" target="_blank"><img src="img/facebook.png" alt="facebook" /></a>
-                            <a href="" target="_blank"><img src="img/instagram.png" alt="instagram" /></a>
-                            <a href="" target="_blank"><img src="img/tiktok.png" alt="tiktok" /></a>
-                            <a href="" target="_blank"><img src="img/youtube.png" alt="youtube" /></a>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="social">
+            <div class="wrapper">
+                <div class="social-wrapper">
+                    <a href="" target="_blank"><img src="img/facebook.png?1" alt="facebook" /></a>
+                    <a href="https://www.instagram.com/jakeandjt/" target="_blank"><img
+                            src="img/instagram.png?1" alt="instagram" /></a>
+                    <a href="https://www.tiktok.com/@jakeandjtt/" target="_blank"><img src="img/tiktok.png?1"
+                            alt="tiktok" /></a>
+                    <a href="https://youtube.com/channel/UCERV0B8X9dfy-a74iS47UEA" target="_blank"><img
+                            src="img/youtube.png?1" alt="youtube" /></a>
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div id="success_tic" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <a class="close" href="#" data-dismiss="modal">&times;</a>
+                    <div class="page-body">
+                        <div class="head">
+                            <h3 style="margin-top:5px;">Your message has been sent across to the team. Stay tuned for a response.</h4>
+                        </div>
+
+                        <div class="main-container">
+                            <div class="check-container">
+                                <div class="check-background">
+                                    <svg viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 25L27.3077 44L58.5 7" stroke="white" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="check-shadow"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="dist/script.js"></script>
 </body>
 
